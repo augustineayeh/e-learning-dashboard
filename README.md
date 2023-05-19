@@ -1,17 +1,3 @@
-# e_learning_dashboard
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# e-learning-dashboard
+# e-learning dashboard
+Built with Flutter
+design: https://www.behance.net/gallery/165455819/Dashboard-for-e-learning?tracking_source=for_you_logged_in_feed_recommended
