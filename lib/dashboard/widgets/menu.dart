@@ -2,15 +2,13 @@ import 'package:e_learning_dashboard/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
-  icon(
-    String imagePath,
-  ) {
+  icon(String imagePath, Color color) {
     return Column(
       children: [
         Image.asset(
           imagePath,
-          height: 35,
-          color: yellow,
+          height: 30,
+          color: color,
         ),
         const SizedBox(
           height: 30,
@@ -19,12 +17,12 @@ class Menu extends StatelessWidget {
     );
   }
 
-  text(String myText) {
+  text(String text, Color color) {
     return Column(
       children: [
         Text(
-          myText,
-          style: const TextStyle(color: yellow, fontSize: 30),
+          text,
+          style: TextStyle(color: color, fontSize: 30),
         ),
         const SizedBox(
           height: 30,
@@ -71,19 +69,12 @@ class Menu extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Image.asset(
-                        'assets/dashboards.png',
-                        height: 30,
-                        color: Colors.white,
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      icon('assets/mouse.png'),
-                      icon('assets/notes.png'),
-                      icon('assets/calendar-2.png'),
-                      icon('assets/email.png'),
-                      icon('assets/settings.png')
+                      icon('assets/dashboards.png', white),
+                      icon('assets/mouse.png', yellow),
+                      icon('assets/notes.png', yellow),
+                      icon('assets/calendar-2.png', yellow),
+                      icon('assets/email.png', yellow),
+                      icon('assets/settings.png', yellow)
                     ],
                   ),
                 ),
@@ -94,16 +85,12 @@ class Menu extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        'Dashboard',
-                        style: TextStyle(color: white, fontSize: 30),
-                      ),
-                      const SizedBox(height: 30),
-                      text('My classes'),
-                      text('My grades'),
-                      text('Schedule'),
-                      text('Messages'),
-                      text('Settings'),
+                      text('Dashboard', white),
+                      text('My classes', yellow),
+                      text('My grades', yellow),
+                      text('Schedule', yellow),
+                      text('Messages', yellow),
+                      text('Settings', yellow)
                     ],
                   ),
                 )
