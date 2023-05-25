@@ -1,37 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:e_learning_dashboard/utils/colors.dart';
+import 'package:e_learning_dashboard/utils/functions.dart';
 import 'package:flutter/material.dart';
 
-class Menu extends StatelessWidget {
-  icon(String imagePath, Color color) {
-    return Column(
-      children: [
-        Image.asset(
-          imagePath,
-          height: 30,
-          color: color,
-        ),
-        const SizedBox(
-          height: 30,
-        )
-      ],
-    );
-  }
-
-  text(String text, Color color) {
-    return Column(
-      children: [
-        Text(
-          text,
-          style: TextStyle(color: color, fontSize: 30),
-        ),
-        const SizedBox(
-          height: 30,
-        )
-      ],
-    );
-  }
-
-  const Menu({super.key});
+class SideBar extends StatelessWidget {
+  const SideBar({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,12 +44,12 @@ class Menu extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      icon('assets/dashboards.png', white),
-                      icon('assets/mouse.png', yellow),
-                      icon('assets/notes.png', yellow),
-                      icon('assets/calendar-2.png', yellow),
-                      icon('assets/email.png', yellow),
-                      icon('assets/settings.png', yellow)
+                      sidebarMenuIcon('assets/dashboards.png', white),
+                      sidebarMenuIcon('assets/mouse.png', yellow),
+                      sidebarMenuIcon('assets/notes.png', yellow),
+                      sidebarMenuIcon('assets/calendar-2.png', yellow),
+                      sidebarMenuIcon('assets/email.png', yellow),
+                      sidebarMenuIcon('assets/settings.png', yellow)
                     ],
                   ),
                 ),
@@ -85,12 +60,12 @@ class Menu extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      text('Dashboard', white),
-                      text('My classes', yellow),
-                      text('My grades', yellow),
-                      text('Schedule', yellow),
-                      text('Messages', yellow),
-                      text('Settings', yellow)
+                      sidebarMenuText('Dashboard', white),
+                      sidebarMenuText('My classes', yellow),
+                      sidebarMenuText('My grades', yellow),
+                      sidebarMenuText('Schedule', yellow),
+                      sidebarMenuText('Messages', yellow),
+                      sidebarMenuText('Settings', yellow)
                     ],
                   ),
                 )
