@@ -1,5 +1,4 @@
 //containers to be colored and given rounded borders
-
 import 'package:e_learning_dashboard/utils/colors.dart';
 import 'package:e_learning_dashboard/utils/functions.dart';
 import 'package:flutter/material.dart';
@@ -11,36 +10,48 @@ class MainSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
-      child: Column(children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         const SizedBox(
           height: 30,
         ),
         SizedBox(
-          height: 50,
-          width: 250,
+          width: 1050,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Expanded(
+              SizedBox(
+                height: 40,
+                width: 350,
                 child: TextField(
                   decoration: InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: deepGreen,
+                    prefixIcon: const Padding(
+                      padding: EdgeInsets.only(left: 20),
+                      child: Icon(
+                        Icons.search,
+                        color: deepGreen,
+                      ),
                     ),
                     hintText: 'Search',
-                    fillColor: lightGreen,
-                    hintStyle: TextStyle(color: Colors.grey),
+                    hintStyle: const TextStyle(color: Colors.grey),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: lightGreen),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                      borderSide: const BorderSide(color: lightGreen),
+                    ),
                   ),
                 ),
               ),
               Row(
                 children: [
-                  const Icon(Icons.notification_add_outlined),
+                  const Icon(Icons.notifications_outlined),
                   const SizedBox(
                     width: 20,
                   ),
-                  text("artificial intelligence", 10),
-                  const Icon(Icons.arrow_downward),
+                  text("Artificial intelligence", 20),
+                  const Icon(Icons.expand_more),
                 ],
               )
             ],
@@ -74,7 +85,7 @@ class MainSection extends StatelessWidget {
                 const SizedBox(
                   height: 12,
                 ),
-                text('Schedule', 18),
+                text('Schedule', 30),
                 const SizedBox(
                   height: 12,
                 ),
@@ -83,6 +94,10 @@ class MainSection extends StatelessWidget {
                   height: 12,
                 ),
                 Container(
+                  decoration: BoxDecoration(
+                      color: lightGreen,
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(10)),
                   child: Row(children: [
                     Column(
                       children: [
@@ -97,7 +112,7 @@ class MainSection extends StatelessWidget {
                       thickness: 1,
                       indent: 20,
                       endIndent: 0,
-                      color: Colors.grey,
+                      color: Colors.white,
                     ),
                     Column(
                       children: [
@@ -125,7 +140,7 @@ class MainSection extends StatelessWidget {
                 const SizedBox(
                   height: 12,
                 ),
-                date('19Feb', '   in 2 days'),
+                date('19 Feb', '   in 2 days'),
                 const SizedBox(
                   height: 12,
                 ),

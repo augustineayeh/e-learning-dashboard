@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:e_learning_dashboard/utils/colors.dart';
 import 'package:e_learning_dashboard/utils/functions.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +39,7 @@ class SideBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 450,
+                  height: 410,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -55,7 +54,7 @@ class SideBar extends StatelessWidget {
                 ),
                 const SizedBox(width: 15),
                 SizedBox(
-                  height: 450,
+                  height: 420,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +71,7 @@ class SideBar extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 150,
+              height: 70,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40.0),
