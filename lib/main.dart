@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'E-learning dashboard',
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'helvetica'),
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'georgia'),
       home: const Dashboard(),
       debugShowCheckedModeBanner: false,
     );

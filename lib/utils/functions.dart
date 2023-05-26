@@ -1,7 +1,7 @@
 import 'package:e_learning_dashboard/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-Image sidebarMenuIcon(String imagePath, Color color) {
+Widget sidebarMenuIcon(String imagePath, Color color) {
   return Image.asset(
     imagePath,
     height: 30,
@@ -9,28 +9,28 @@ Image sidebarMenuIcon(String imagePath, Color color) {
   );
 }
 
-Text sidebarMenuText(String text, Color color) {
+Widget sidebarMenuText(String text, Color color) {
   return Text(
     text,
     style: TextStyle(color: color, fontSize: 30),
   );
 }
 
-Text text(String text, double fontSize) {
+Widget text(String text, double fontSize) {
   return Text(
     text,
     style: TextStyle(
-        fontSize: fontSize, color: deepGreen, fontWeight: FontWeight.w600),
+        fontSize: fontSize, color: deepGreen, fontWeight: FontWeight.w500),
   );
 }
 
-RichText date(String text1, String text2) {
+Widget date(String text1, String text2) {
   return RichText(
       text: TextSpan(children: [
     TextSpan(
         text: text1,
         style: const TextStyle(
-            color: deepGreen, fontSize: 16, fontWeight: FontWeight.w600)),
+            color: deepGreen, fontSize: 14, fontWeight: FontWeight.w600)),
     TextSpan(
         text: text2,
         style: const TextStyle(
@@ -38,12 +38,13 @@ RichText date(String text1, String text2) {
   ]));
 }
 
-Container scheduleCard(String course, String time, String middleText,
-    String secondText, String subText) {
+Widget scheduleCard(String filePath, String course, String time,
+    String middleText, String secondText, String subText) {
   return Container(
-      width: 500,
-      padding: const EdgeInsets.all(10),
+      width: 552,
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
+          boxShadow: const [],
           border: Border.all(color: Colors.grey),
           borderRadius: BorderRadius.circular(15)),
       child: Row(
@@ -56,7 +57,10 @@ Container scheduleCard(String course, String time, String middleText,
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Icon(Icons.desk),
+                      Image.asset(
+                        filePath,
+                        height: 20,
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -77,7 +81,7 @@ Container scheduleCard(String course, String time, String middleText,
                 endIndent: 0,
                 color: Colors.grey,
               ),
-              text(middleText, 22),
+              SizedBox(width: 220, child: text(middleText, 22)),
               const VerticalDivider(
                 width: 20,
                 thickness: 1,
@@ -89,11 +93,34 @@ Container scheduleCard(String course, String time, String middleText,
                 text(secondText, 14),
                 Text(
                   subText,
-                  style: const TextStyle(color: Colors.grey, fontSize: 10),
+                  style: const TextStyle(color: Colors.grey, fontSize: 12),
                 )
               ])
             ],
           )
         ],
       ));
+}
+
+Widget createAvatar(String filePath) {
+  return Column(
+    children: [
+      CircleAvatar(
+        backgroundImage: AssetImage(filePath),
+        radius: 30,
+      ),
+    ],
+  );
+}
+
+Widget createPerson(String filePath, String name) {
+  return Column(
+    children: [
+      createAvatar(filePath),
+      const SizedBox(
+        height: 5,
+      ),
+      Text(name)
+    ],
+  );
 }

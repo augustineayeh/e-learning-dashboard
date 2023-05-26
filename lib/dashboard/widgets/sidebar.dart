@@ -54,7 +54,7 @@ class SideBar extends StatelessWidget {
                 ),
                 const SizedBox(width: 15),
                 SizedBox(
-                  height: 420,
+                  height: 415,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +71,7 @@ class SideBar extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 70,
+              height: 190,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 40.0),
@@ -81,10 +81,7 @@ class SideBar extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const CircleAvatar(
-                        backgroundImage: AssetImage('assets/student.webp'),
-                        radius: 30,
-                      ),
+                      createAvatar('assets/student.webp'),
                       const SizedBox(
                         width: 10,
                       ),
